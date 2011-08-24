@@ -6,7 +6,7 @@
 <h1>{% blocktrans with path.path as path %}Edit file {{ path }}{% endblocktrans %}</h1>
 
 <div id="content-main">
-    <form enctype="multipart/form-data" action="" method="post" id="edit_form"><div>
+    <form enctype="multipart/form-data" action="" method="post" id="edit_form">{% csrf_token %}<div>
         <fieldset class="module aligned">{% for f in form %}
             <div class="form-row{% if f.errors %} errors{% endif %} {{ f.name }}">
                 {% if f.errors %}{{ f.errors }}{% endif %}
