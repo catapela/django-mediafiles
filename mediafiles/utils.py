@@ -1,21 +1,9 @@
-import mimetypes
+
 import os
-import shutil
-import sys
-
-from datetime import datetime
-from urlparse import urljoin
-
 from django.conf import settings
-from django.core.files.uploadedfile import UploadedFile
 from django.core.urlresolvers import reverse
-from django.db.models import permalink
 from django.template import Context, RequestContext
-from django.utils.encoding import force_unicode
-from django.utils.translation import ugettext as _
-
 from settings import MEDIAFILES_MEDIA_PREFIX
-
 
 __all__ = ('auto_context', 'get_last_commit', 'get_media_prefix', 'get_version')
 
